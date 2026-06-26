@@ -1,0 +1,86 @@
+# Proportional Navigation Guidance Simulation
+
+## 1. Background
+
+This project implements a two-dimensional proportional navigation (PN) guidance simulation for missile-target interception. It is designed to demonstrate basic guidance law modeling, relative motion simulation, MATLAB numerical integration, and result analysis.
+
+## 2. Model
+
+The missile and target are modeled as point masses moving in a two-dimensional plane.
+
+- Missile state: position, speed, and heading angle.
+- Target state: position, speed, and heading angle.
+- Target motion cases: constant-speed straight flight and simple maneuvering flight.
+
+This is a simplified guidance simulation. Aerodynamics, actuator dynamics, seeker noise, gravity, and autopilot inner-loop dynamics are not included.
+
+## 3. Method
+
+The proportional navigation guidance law is implemented as:
+
+```text
+a_m = N * V_c * lambda_dot
+```
+
+where:
+
+- `a_m` is the missile lateral acceleration command.
+- `N` is the navigation constant.
+- `V_c` is the closing velocity.
+- `lambda_dot` is the line-of-sight angular rate.
+
+The missile heading rate is calculated by:
+
+```text
+gamma_dot = a_m / V_m
+```
+
+The simulation updates the missile and target positions step by step using numerical integration.
+
+## 4. Simulation Cases
+
+The simulation compares:
+
+- Initial missile heading angles: `0 deg`, `+10 deg`, and `-10 deg`.
+- Straight target motion.
+- Maneuvering target motion.
+- Miss distance under different engagement conditions.
+
+## 5. Results
+
+### Interception Trajectories
+
+![PN guidance interception trajectories](figures/trajectory.png)
+
+### Line-of-Sight Rate Comparison
+
+![Line-of-sight rate comparison](figures/los_rate.png)
+
+### Miss Distance Comparison
+
+![Miss distance comparison](figures/miss_distance_compare.png)
+
+## 6. How to Run
+
+Open MATLAB and run:
+
+```matlab
+cd 'E:\github\aircraft-control-simulation-portfolio\04_pn_guidance_sim'
+pn_guidance
+```
+
+The script will generate result figures in:
+
+```text
+figures/
+```
+
+## 7. Resume Description
+
+Implemented a two-dimensional proportional navigation guidance simulation in MATLAB and analyzed the influence of initial engagement angle and target maneuvering on interception trajectory and miss distance.
+
+Chinese resume version:
+
+```text
+基于 MATLAB 实现二维导弹-目标相对运动与比例导引律仿真，使用闭合速度和视线角速度生成法向加速度指令；设置不同初始航向角及目标匀速/机动工况，输出拦截轨迹、LOS 角速度和脱靶量对比图，分析导引律对初始交会条件和目标机动的敏感性。
+```
