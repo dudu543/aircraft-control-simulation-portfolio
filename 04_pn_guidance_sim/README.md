@@ -60,25 +60,6 @@ The simulation compares:
 
 ![Miss distance comparison](figures/miss_distance_compare.png)
 
-## 6. How to Run
-
-Open MATLAB and run:
-
-```matlab
-cd 'E:\github\aircraft-control-simulation-portfolio\04_pn_guidance_sim'
-pn_guidance
-```
-
-The script will generate result figures in:
-
-```text
-figures/
-```
-
-## 7. Resume Description
-
-Implemented a two-dimensional proportional navigation guidance simulation in MATLAB and analyzed the influence of initial engagement angle and target maneuvering on interception trajectory and miss distance.
-
 Chinese resume version:
 
 ```text
