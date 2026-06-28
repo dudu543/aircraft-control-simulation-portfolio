@@ -59,9 +59,3 @@ The simulation compares:
 ### Miss Distance Comparison
 
 ![Miss distance comparison](figures/miss_distance_compare.png)
-
-Chinese resume version:
-
-```text
-基于 MATLAB 实现二维导弹-目标相对运动与比例导引律仿真，使用闭合速度和视线角速度生成法向加速度指令；设置不同初始航向角及目标匀速/机动工况，输出拦截轨迹、LOS 角速度和脱靶量对比图，分析导引律对初始交会条件和目标机动的敏感性。
-```
